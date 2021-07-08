@@ -45,12 +45,9 @@ FROM employees as e
 	LEFT JOIN titles as t
 		ON e.emp_no=t.emp_no
 WHERE (de.to_date='9999-01-01') 
-	 AND (e.birth_date>='1965-01-01' AND e.birth_date<='1965-12-31')
+	 AND (e.birth_date>='1965-01-01' AND e.birth_date<='1965-12-31') AND (t.to_date='9999-01-01')
 ORDER BY e.emp_no ASC
 ;
-
-
-
 
 
 
